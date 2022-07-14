@@ -12,7 +12,7 @@
 
 .container {
     margin: 0 auto;
-    width: 60%;
+    width: 100%;
 }
 
 .displayText {
@@ -22,7 +22,6 @@
 /* From uiverse.io by @adamgiebl */
 button {
     color: #090909;
-    padding: 0.5rem 1.2rem;
     font-size: .7rem;
     border-radius: 0.5em;
     background: #e8e8e8;
@@ -30,45 +29,52 @@ button {
     transition: all .3s;
     /* box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #ffffff; */
-   }
+}
+
+.addBtn {
+    grid-area: add;
+}
+  
+.equalsBtn {
+    grid-area: equals;
+}
    
-   button:hover {
+button:hover {
     border: 1px solid white;
-   }
+}
    
-   button:active {
+button:active {
     box-shadow: 4px 4px 12px #c5c5c5,
                 -4px -4px 12px #ffffff;
-   }
-
-.display {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    text-align: right;
-    font-size: 2rem;
 }
 
 .card {
     margin: 0 auto;
     width: 12rem;
     height: 15rem;
+    padding: 0 .4rem .4rem .4rem;
     background: linear-gradient(135deg, #ebadb6 0%, #aceae1 100%);
     border-radius: .5rem;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-   }
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: .3rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "display display display display display"
+      ". . . . ."
+      ". . . . ."
+      ". . . add equals"
+      ". . . add equals";
+}
+
    
-   
-   /* .card__content {
-    padding: 1rem;
-    font-size: smaller;
-   } */
-   
-   
-   .cardDisplay {
+.cardDisplay {
     margin: 0 auto;
     overflow: hidden;
-    margin-top: 3rem;
+    margin-top: .3rem;
     margin-bottom: .4rem;
     width: 80%;
     height: 30px;
@@ -78,5 +84,5 @@ button {
     background: linear-gradient(135deg, #FFFFFF 0%, lightgrey 100%);
     z-index: 100;
     text-align: right;
-   }
-   
+    grid-area: display;
+}
