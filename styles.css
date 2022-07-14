@@ -57,10 +57,9 @@ button:active {
     border-radius: .5rem;
     box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
     display: grid;
-    gap: .2rem;
+    gap: .5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: .3rem;
     grid-auto-flow: row;
     grid-template-areas:
       "display display display display display"
@@ -69,12 +68,11 @@ button:active {
       ". . . add equals"
       ". . . add equals";
 }
-
    
 .cardDisplay {
     margin: 0 auto;
     overflow: hidden;
-    margin-top: .3rem;
+    margin-top: .7rem;
     margin-bottom: .4rem;
     width: 80%;
     height: 30px;
