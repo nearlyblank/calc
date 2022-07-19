@@ -3,6 +3,14 @@
     src: url('ModernSans-Light.otf');
   }
 
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 * {
     font-size: 1.6rem;
     font-family: ModernSans-Light;
@@ -73,14 +81,15 @@ button:active {
 }
    
 .cardDisplay {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: .4rem;
     margin-top: .7rem;
     margin-bottom: .4rem;
-    width: 88%;
-    height: 1.4rem;
+    width: 98%;
+    height: 3.2rem;
     padding: 1rem .7rem;
     font-size: smaller;
     border-radius: .5rem;
