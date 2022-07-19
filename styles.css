@@ -16,7 +16,7 @@
 }
 
 .displayText {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 /* From uiverse.io by @adamgiebl */
@@ -27,15 +27,13 @@ button {
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
     transition: all .3s;
-    /* box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff; */
 }
 
-.addBtn {
+#add {
     grid-area: add;
 }
   
-.equalsBtn {
+#equals {
     grid-area: equals;
 }
    
@@ -67,6 +65,7 @@ button:active {
       ". . . . ."
       ". . . add equals"
       ". . . add equals";
+      /*center positioning*/
       position: absolute;
       top: 50%;
       left: 50%;
@@ -74,13 +73,15 @@ button:active {
 }
    
 .cardDisplay {
-    margin: 0 auto;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: .4rem;
     margin-top: .7rem;
     margin-bottom: .4rem;
     width: 88%;
-    height: 30px;
-    padding: .7rem;
+    height: 1.4rem;
+    padding: 1rem .7rem;
     font-size: smaller;
     border-radius: .5rem;
     background: linear-gradient(135deg, #FFFFFF 0%, lightgrey 100%);
