@@ -102,7 +102,12 @@ const calculate = () => {
     if (operator === '/') result = num1 / num2;
   
     result = Math.round((result + Number.EPSILON) * 10000) / 10000;
+    if (result == Infinity) {
+        displayText = `c'mon`;
+    }
+    else {
     displayText = result;
+    }
     display[0].textContent = displayText;
     num1 = result;
     num2 = '';
